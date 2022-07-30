@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.App.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="colorPrimary">#273c75</Color>
+            <Color x:Key="colorPrimaryDark">#192a56</Color>
+            <Color x:Key="colorAccent">#dcdde1</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

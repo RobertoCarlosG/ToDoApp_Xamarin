@@ -26,15 +26,21 @@ namespace ToDoList.App.View
                     Name = nombre.Text,
                     Description = descripcion.Text
                 };
-                var result = await App.Context.InsertItemAsync(item);
-                if(result == 1)
-                {
-                    await Navigation.PopAsync();
-                }
+                if (item.Description == null)
+                    await DisplayAlert("Error", "No se puede dejar vacia la descripcion", "Ok");
                 else
                 {
-                    await DisplayAlert("Error", "No se pudo ingresar la tarea", "Aceptar");
+                    var result = await App.Context.InsertItemAsync(item);
+                    if (result == 1)
+                    {
+                        await Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "No se pudo ingresar la tarea", "Aceptar");
+                    }
                 }
+                
             }catch (Exception ex){
                 await DisplayAlert("Error", ex.Message, "Aceptar");
             }

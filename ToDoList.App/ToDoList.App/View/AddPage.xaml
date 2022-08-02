@@ -9,9 +9,9 @@
     <ContentPage.Content>
         <StackLayout Padding="15">
             <Label Text="Nombre" FontSize="Medium" TextColor="Black"/>
-            <Entry x:Name="nombre"/>
+            <Entry x:Name="nombre" Placeholder="Nombre de la Tarea"/>
             <Label Text="Descripción" FontSize="Medium"  TextColor="Black"/>
-            <Entry x:Name="descripcion" HeightRequest="200" />
+            <Entry x:Name="descripcion" Placeholder="Descripcion de la actividad" MaxLength="600"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
